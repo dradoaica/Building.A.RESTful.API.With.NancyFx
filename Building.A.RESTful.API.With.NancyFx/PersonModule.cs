@@ -14,8 +14,8 @@ namespace Building.A.RESTful.API.With.NancyFx
 
             Get[""] = GetAllAction;
             Get["{id:int}"] = GetAction;
-            Put[""] = AddAction;
-            Post["{id:int}"] = ModifyAction;
+            Post[""] = AddAction;
+            Put["{id:int}"] = ModifyAction;
             Delete["{id:int}"] = DeleteAction;
         }
 
