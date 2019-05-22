@@ -1,4 +1,5 @@
 ﻿using Microsoft.Owin.Hosting;
+using Nancy.Owin;
 using Owin;
 using System;
 
@@ -10,7 +11,11 @@ namespace Building.A.RESTful.API.With.NancyFx
         {
             public void Configuration(IAppBuilder app)
             {
-                app.UseNancy();
+                NancyOptions options = new NancyOptions
+                {
+                    Bootstrapper = new Bootstrapper()
+                };
+                app.UseNancy(options);
             }
         }
 
